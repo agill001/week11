@@ -31,3 +31,18 @@
 //  radiusParagraph.textContent +=r;
 //  let areaParagraph = document.querySelector("#result");
 //  areaParagraph.textContent += calculatedArea
+
+let shoppingItems = ["cheese","bread","green pepper"];
+// DOM mode for <ul>
+const shoppingListElement = document.querySelector(".shopping");
+function populateList(arr)
+{
+    for (let item of arr){
+        let listItem = document.createElement("li");
+        listItem.textContent = item;
+        shoppingListElement.appendChild(listItem);
+    } // for (let i = 0); i < arr.length; i++ ) // arr.forEach()
+    
+}
+
+populateList(shoppingItems);

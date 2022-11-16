@@ -46,3 +46,23 @@ function populateList(arr)
 }
 
 populateList(shoppingItems);
+
+function changeListstyle(listItem){
+    shoppingListElement.classList.remove("circleList");
+    shoppingListElement.classList.add("squareList");
+}
+
+changeListstyle()
+
+function makegreen()
+{
+    const allListItems = document.querySelectorAll(".shopping li");
+    for ( let i =0; i<allListItems.length; i++){
+        if (allListItems[i].textContent.includes("green"))
+        {
+            allListItems[i].classList.add(".green");
+        }
+    }
+}
+
+makegreen();
